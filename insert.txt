@@ -1,0 +1,14 @@
+use jadrn058;
+
+INSERT INTO product(sku,catID,subcatID,venID,mnfgIdentity,description,features,cost,retail,image)VALUES
+('ABC-123', 1, 2, 1, 'CD-909', 'good','good', '134', '255','image1.jpg');
+INSERT INTO product(sku,catID,subcatID,venID,mnfgIdentity,description,features,cost,retail,image)VALUES
+('ABC-124', 1, 2, 2, 'AD-909', 'good','good', '234', '355','image2.jpg');
+INSERT INTO product(sku,catID,subcatID,venID,mnfgIdentity,description,features,cost,retail,image)VALUES
+('ABC-153', 2, 1, 3, 'MD-909', 'good','good', '434', '565','image3.jpg');
+INSERT INTO product(sku,catID,subcatID,venID,mnfgIdentity,description,features,cost,retail,image)VALUES
+('ABC-193', 2, 1, 4, 'CJ-909', 'good','good', '134', '315','image3.jpg');
+INSERT INTO product(sku,catID,subcatID,venID,mnfgIdentity,description,features,cost,retail,image)VALUES
+('ABC-179', 3, 3, 5, 'YD-109', 'good','good', '342', '551','image4.jpg');
+INSERT INTO product(sku,catID,subcatID,venID,mnfgIdentity,description,features,cost,retail,image)VALUES
+('ABC-200', 3, 3, 2, 'PD-000', 'good','good', '314', '551','image5.jpg');

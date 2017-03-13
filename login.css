@@ -1,0 +1,42 @@
+/*Name:Shahane,Shweta Kisan
+ Acc_No:jadrn058*/
+
+h1, h2 {
+	text-align: center;
+   }
+
+.login_table{
+	margin: 25px auto 25px auto;
+	border:	2px solid black;
+	padding: 20px;
+   	}
+
+input {
+	font-size: 120%;
+	}
+
+.button {
+
+	margin: 20px 25px;
+	}
+
+td .button {
+	float: right;
+	}
+
+.error {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+
+body{
+background-color:#C0C0C0;
+}
+
+.logout{
+float:right;
+margin-right: 41px;
+font-size: 120%;
+}
+

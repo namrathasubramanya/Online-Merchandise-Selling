@@ -1,0 +1,301 @@
+<!--Name:Shahane,Shweta
+  Acc_No:jadrn058 -->
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SHOE STORE ONLINE</title>
+    <link rel="stylesheet" href="/~jadrn058/proj1/login.css">
+    <link rel="stylesheet" href="/~jadrn058/proj1/tabs.css">
+    <script src="/jquery/jquery.js"></script>
+    <script src="/jquery/jQueryUI.js"></script>
+    <script src="tabs.js"></script>
+    <script src="ajax_get_lib.js"></script>
+    <script src="check_dup.js"></script>
+    <script src="edit.js"></script>
+    <script src="delete.js"></script>
+    <script src="login.js"></script>
+    
+</head>
+<body>
+  <!--Login Page -->
+  <div id="login_page">
+    <h1>ONLINE SHOE STORE</h1>
+    <div id="main">
+    <form method="POST" action="">
+    <table class="login_table">
+		<tr>
+			<td>Username:</td>
+			<td><input type="text" name="user" id="user" size="15" autofocus></td>
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td><input type="password" name="password" id="password" size="15"></td>
+		</tr>
+		<tr>
+			<td><input type="reset" name ="reset" id="reset" class="button"></td>
+			<td><input type="button" class="login_button" value="Login" class="button" id="login"></td>
+			
+		</tr>
+		</table>
+   
+      <div id="status1" class="error"></div>
+    
+	
+    </form>
+    </div>
+  </div>
+<!--Tabs Page -->
+<div id="tabs_page">
+  <h2>WELCOME TO SHOE STORE</h2>
+  <div class="logout">
+  <a id="logout" href="#">Logout</a>
+  </div>
+     <div id="tabs">
+       <ul>
+         <li><a href="#tabs-1"><span>New Record</span></a></li>
+         <li><a href="#tabs-2"><span>Edit Record</span></a></li>
+         <li><a href="#tabs-3"><span>Delete Record</span></a></li>
+       </ul>
+       <div id="tabs-1">
+         <h2>New Record</h2>
+         <form method="post" enctype="multipart/form-data" name="myform" action="">
+	 <div id="messageLine1" class="error"></div>
+	   <div id="messageLine2"class="error"></div>
+           <table>
+	   
+         <tr>
+           <td>SKU:*</td>
+           <td><input type="text" name="sku" id="sku" size="15" autofocus></td>
+           
+         </tr>
+
+         <tr>
+           <td>Category:*</td>
+           <td><select name="cat" id="cat">
+           </td>
+          
+         </tr>
+         <tr>
+           <td>Sub-Category:*</td>
+           <td><select name="subcat" id="subcat">
+         </select></td>
+         
+         </tr>
+         <tr>
+           <td>Vendor:*</td>
+           <td><select name="ven" id="ven">
+         </select></td>
+         
+         </tr>
+
+         <tr>
+           <td>Manufacturer's Identifier:*</td>
+           <td><input type="text" name="mfgIdentity" id="mfgIdentity" size="15"></td>
+          
+         </tr>
+
+         <tr>
+           <td>Description:*</td>
+           <td><textarea rows="4" cols="50" name="desc" id="desc"></textarea></td>
+           
+         </tr>
+
+         <tr>
+           <td>Features:*</td>
+           <td><textarea rows="4" cols="50" name="prodFeatures" id="prodFeatures"></textarea></td>
+           
+         </tr>
+
+         <tr>
+           <td>Cost:*</td>
+           <td><input type="text" size="15" name="cost" id="cost"></td>
+          
+         </tr>
+
+
+         <tr>
+           <td>Retail:*</td>
+           <td><input type="text" size="15" name="retail" id="retail"></td>
+         
+         </tr>
+
+         <tr>
+           <td>Product Image:*</td>
+           <td><input type="file" name="image" id="image" accept="image/*"></td>
+           
+         </tr>
+         <tr>
+           <td><input type="button" id="add" name="add" value="Add Product"></td>
+	   <td><input type="reset" name ="add_reset" id="add_reset" class="button"></td>
+         </tr>
+        
+        </table>
+	</form>
+	<div id="status1"></div>
+	<div id="status"></div>
+        <div id="add_pic"></div>
+	 </div>
+       <div id="tabs-2">
+         <h2>Edit Existing Record</h2>
+         <form method="post" enctype="multipart/form-data" name="myform" action="">
+	 <div id="edit_messageLine1" class="error"></div>
+           <table>
+	   
+         <tr>
+           <td>SKU:*</td>
+           <td><input type="text" name="edit_sku" id="edit_sku" size="15" autofocus></td>
+     
+         </tr>
+
+         <tr>
+           <td>Category:*</td>
+           <td><select name="edit_cat" id="edit_cat">
+           </td>
+         </tr>
+         <tr>
+           <td>Sub-Category:*</td>
+           <td><select name="edit_subcat" id="edit_subcat">
+         </select></td>
+       
+         </tr>
+         <tr>
+           <td>Vendor:*</td>
+           <td><select name="edit_ven" id="edit_ven">
+         </select></td>
+       
+         </tr>
+
+         <tr>
+           <td>Manufacturer's Identifier:*</td>
+           <td><input type="text" name="edit_mfgIdentity" id="edit_mfgIdentity" size="15"></td>
+           
+         </tr>
+
+         <tr>
+           <td>Description:*</td>
+           <td><textarea rows="4" cols="50" name="edit_desc" id="edit_desc"></textarea></td>
+           
+         </tr>
+
+         <tr>
+           <td>Features:*</td>
+           <td><textarea rows="4" cols="50" name="edit_prodFeatures" id="edit_prodFeatures"></textarea></td>
+          
+         </tr>
+
+         <tr>
+           <td>Cost:*</td>
+           <td><input type="text" size="15" name="edit_cost" id="edit_cost"></td>
+           
+         </tr>
+
+
+         <tr>
+           <td>Retail:*</td>
+           <td><input type="text" size="15" name="edit_retail" id="edit_retail"></td>
+          
+         </tr>
+
+         <tr>
+           <td>Product Image:*</td>
+           <td><input type="file" name="edit_image" id="edit_image" accept="image/*"></td>
+           
+         </tr>
+         <tr>
+           <td><input type="button" value="Edit Product" id="edit" name="edit"></td>
+	   <td><input type="reset" name ="edit_reset" id="edit_reset" class="button"></td>
+         </tr>
+         
+        </table>
+         </form>
+	 <div id="edit_status1"></div>
+	 <div id="edit_status"></div>
+        <div id="edit_pic"></div>
+       </div>
+       <div id="tabs-3">
+         <h2>Delete Existing Record</h2>
+         <form method="post" enctype="multipart/form-data" id="deleteFormData" action="">
+	 <div id="delete_messageLine1" class="error"></div>
+	  <div id="delete_messageLine2" class="error"></div>
+           <table>
+	   
+         <tr>
+           <td>SKU:*</td>
+           <td><input type="text" name="delete_sku" id="delete_sku" size="15" autofocus></td>
+           
+         </tr>
+
+         <tr>
+           <td>Category:*</td>
+           <td><select name="delete_cat" id="delete_cat" disabled>
+           </td>
+          
+         </tr>
+         <tr>
+           <td>Sub-Category:*</td>
+           <td><select name="delete_subcat" id="delete_subcat" disabled>
+         </select></td>
+       
+         </tr>
+         <tr>
+           <td>Vendor:*</td>
+           <td><select name="delete_ven" id="delete_ven" disabled>
+         </select></td>
+         
+         </tr>
+
+         <tr>
+           <td>Manufacturer's Identifier:*</td>
+           <td><input type="text" name="delete_mfgIdentity" id="delete_mfgIdentity" size="15" disabled></td>
+           
+         </tr>
+
+         <tr>
+           <td>Description:*</td>
+           <td><textarea rows="4" cols="50" name="delete_desc" id="delete_desc" disabled></textarea></td>
+           
+         </tr>
+
+         <tr>
+           <td>Features:*</td>
+           <td><textarea rows="4" cols="50" name="delete_prodFeatures" id="delete_prodFeatures" disabled></textarea></td>
+           
+         </tr>
+
+         <tr>
+           <td>Cost:*</td>
+           <td><input type="text" size="15" name="delete_cost" id="delete_cost" disabled></td>
+           
+         </tr>
+
+
+         <tr>
+           <td>Retail:*</td>
+           <td><input type="text" size="15" name="delete_retail" id="delete_retail" disabled></td>
+      
+         </tr>
+
+         <tr>
+           <td>Product Image:*</td>
+           <td><input type="file" name="delete_image" id="delete_image" accept="image/*" disabled></td>
+           
+         </tr>
+         <tr>
+           <td><input type="button" id="delete"  value="Delete Product" name="delete"></td>
+         </tr>
+         
+        </table>
+         </form>
+	 <div id="delete_status"></div>
+        <div id="delete_pic"></div>
+       </div>
+     </div>
+
+
+</div>
+
+
+</body>
+</html>
